@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1.head-title= '#' + name
+    .container
+        each tweet in tweets
+            .wrapper.large
+                small
+                   a(href='/profile/' + tweet.author.username)= tweet.author.username + ', '
+                small= tweet.dateCreated.toString().slice(0, 24)
+                p= tweet.content
+    //.cards
+    //    if onFirstPage
+    //    else
+    //        a.btn.btn-primary(href='?page=' + prevPage) <
+    //    span= 'Page ' + page
+    //    if onLastPage
+    //    else
+    //        a.btn.btn-primary(href='?page=' + nextPage) >

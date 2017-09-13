@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    form(method='post')
+        .form-group
+            label(for='title') Title:
+            input#title.input-field(name='title' type='text', value=title readonly=true)
+        .form-group
+            label(for='description') Description
+            textarea#description.input-field(name='description' readonly=true)= description
+        .form-group
+            input.btn.form-btn.btn-danger(type='submit' value='Delete')
+
+    .answers
+        each answer in answers
+            .card
+                form(method='post' action='/answer/edit/' + answer._id)
+                    .form-group
+                        label(for='content')
+                        input.input-field(name='content' type='text' value=answer.content readonly=true)
+

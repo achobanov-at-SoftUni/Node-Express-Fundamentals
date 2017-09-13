@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+    .container
+        .row.flipInX.animated
+            .col-sm-8
+                .panel.panel-default
+                    .panel-heading Credentials:
+                    .panel-body
+                        form(method='post')
+                            .form-group
+                                label.control-label Username:
+                                input.form-control(name="username" type="text" value=username)
+                            .form-group
+                                label.control-label Password:
+                                input.form-control(name="password" type="password")
+                            .form-group
+                                label.control-label Confirm password:
+                                input.form-control(name="confirmPassword" type="password")
+                            .form-group
+                                label.control-label First name:
+                                input.form-control(name="firstName" type="text" value=firstName)
+                            .form-group
+                                label.control-label Last Name:
+                                input.form-control(name="lastName" type="text" value=lastName)
+                            .form-group
+                                label.control-label Age:
+                                input.form-control(name="age" type="text" value=age)
+                            .form-group
+                                label.control-label Gender:
+                                .radio.radio-inline
+                                    input#female.form-control(name="gender" value="female" type="radio")
+                                    label.control-label(for="female") Female
+                                .radio.radio-inline
+                                    input#male.form-control(name="gender" value="male" type="radio")
+                                    label.control-label(for="male") Male
+                            button.btn.btn-primary(type="submit") Register

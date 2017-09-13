@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    .container
+        h2= 'Username: ' + username
+        if roles.indexOf('Admin') !== -1
+            strong Admin
+        p= 'First name: ' +  firstName
+        p= 'Last name: ' +  lastName
+        p= 'Age: ' +  age
+        p= 'Gender: ' +  gender
+    .container
+        h3 Tweets:
+        each tweet in tweets
+            .wrapper.row.large
+                small
+                   a(href='/profile/' + tweet.author.username)= tweet.author.username + ', '
+                small= tweet.dateCreated.toString().slice(0, 24)
+                span= tweet.views + '('
+                span#likes= tweet.likes + ')'
+                p= tweet.content
+                if hasUserAccess
+                    if userHasLikedTweet
+                        form(method='post' action='/tweet/' + _id + '/dislike')
+                            input.btn.btn-danger(type='submit' value='dislike')
+                    else
+                        form(method='post' action='/tweet/' + _id + '/like')
+                            input.btn.btn-success(type='submit' value='Like')

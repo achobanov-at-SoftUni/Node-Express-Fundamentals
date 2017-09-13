@@ -1,0 +1,12 @@
+extends ../../layout
+
+block content
+    h2 Admins:
+    .container
+        each admin in admins
+            .wrapper.inline.medium
+                h2= 'Username: ' + admin.username
+                p= 'First name: ' + admin.firstName
+                p= 'Last name: ' + admin.lastName
+                p= 'Age: ' + admin.age
+                p= 'Gender: ' + admin.gender1

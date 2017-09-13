@@ -1,0 +1,26 @@
+
+.message {
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px 20px;
+    border-radius: 2px;
+}
+.message.error {
+    background: darkred;
+}
+.message.success {
+    color: darkgreen;
+}
+#user-name {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+}
+#user-name:first-letter {
+    text-transform: uppercase;
+}
+#user-name:hover {
+    background: inherit;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "2017-05-16_lab_shop-stop_part-1",
+  "version": "1.0.0",
+  "description": "Simple shopping application, for studying and practice purposes. Consists of 5 steps: 1) Project structure; 2) Third-Party modules; 3) Database models and relations; 4) Advanced functionality; 5) User authentication;",
+  "main": "index.js",
+  "author": "Alex Chobanov",
+  "engine": "7.1.0",
+  "scripts": {
+      "start": "node index.js"
+  },
+  "license": "ISC"
+}

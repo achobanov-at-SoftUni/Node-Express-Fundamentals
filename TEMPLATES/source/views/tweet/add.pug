@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    form.form.center-form(method='post')
+        h2 Tweet
+        .form-group
+            label(for='content') Content
+            textarea#content.input-field(name='content')
+        .form-group
+            input.form-btn.btn(type='submit', value='Add')

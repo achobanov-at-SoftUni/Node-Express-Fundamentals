@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    .card
+        h2= 'Username: ' + username
+        if roles.indexOf('Admin') !== -1
+            strong Admin
+        p= 'First name: ' +  firstName
+        p= 'Last name: ' +  lastName
+        p= 'Age: ' +  age
+        p= 'Gender: ' +  gender
+    if hasAdminAccess
+        form(method='post' action='/user/' + _id + '/block')
+            input.btn.btn-danger(type='submit' value='Block')
+    .cards
+        h2 Topics:
+        each topic in topics
+            .card
+                h3= topic.title
+                p= topic.description
+    .cards
+        h2 Answers
+        each answer in answers
+            .card
+                p= answer.content

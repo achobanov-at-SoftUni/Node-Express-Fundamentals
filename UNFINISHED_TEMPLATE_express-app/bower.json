@@ -1,0 +1,22 @@
+{
+  "name": "2017-06-08_exam-prep-1_forum-system",
+  "description": "Exam prep 1",
+  "main": "index.js",
+  "authors": [
+    "Alex"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "bootstrap": "3.3.5",
+    "toastr": "2.1.1"
+  }
+}

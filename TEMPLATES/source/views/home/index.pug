@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h1.head-title Welcome to Tweeter!
+    if tweets && tweets.length !== 0
+        .wrapper
+            each tweet in tweets
+                .wrapper.row
+                    small
+                       a(href='/profile/' + tweet.author.username)= tweet.author.username + ', '
+                    small= tweet.dateCreated.toString().slice(0, 24)
+                    p= tweet.description

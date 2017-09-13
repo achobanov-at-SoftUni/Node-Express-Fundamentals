@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    form.form.center-form(method='post')
+        h2 Add Product
+        .form-group
+            label(for='title') Title
+            input#title.input-field(name='title', type='text')
+        .form-group
+            label(for='description') Description
+            textarea#description.input-field(name='description')
+        .form-group
+            label(for='category') Group
+            select#category.input-field(name='categoryId')
+                each category in categories
+                    option(value=category._id)=category.name
+        .form-group
+            input.form-btn.btn(type='submit', value='Add')

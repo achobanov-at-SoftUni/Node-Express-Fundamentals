@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-mongoose",
+  "version": "1.0.0",
+  "description": "MongoDB and Mongoose Exercises",
+  "engines": {
+    "node": "8.0.0",
+    "npm": "5.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Mirchev",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "4.10.4"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "2017-05-29_excercises_mongoDb-mongoose",
+  "version": "0.0.1",
+  "dependencies": {
+    "mongodb": "2.2.27",
+    "mongoose": "^4.10.3"
+  }
+}

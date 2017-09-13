@@ -1,0 +1,11 @@
+{
+  "name": "2017-05-17_excercises_node-intro",
+  "version": "1.0.0",
+  "description": "Excercise for JS Web ExpressJS course - Introduction to Node; Storage module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Chobanov",
+  "license": "ISC"
+}

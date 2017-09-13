@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    div#greet
+        p Predi negativna ocenka, zaradi 1-2 stranichki po-malko, molq razgledajte Stylus i Font-end scriptovete. Vijte na concert/details kak se dobavqt pesnite. Daje ima i error messages. Obyrnete vnimanie na search-a /controllers/home. Za kojto mu e interesno - full text search. S dve dumi - poigral sym si baq :)
+        p Za da mahnete tova syobshtenie otidete v ./source/views/home/index i iztrijte div#greet
+        button#close-greeting Close
+    h1 Latest Concerts
+    form(method='POST' action='/')
+        input#search(type='text', name="filter", placeholder='search...')
+        input#filter(type='submit')
+    if concerts
+        each concert in concerts
+            section.card
+                h2= concert.name
+                img.pull-left(src = concert.cover)
+                div.pull-right
+                    p= 'Band:' + concert.band
+                    p= 'Location:' + concert.location
+                    p= 'Date:' + concert.date
+                    ul
+                        if concert.setList
+                        each song in concert.setList
+                            li= concert.setList.indexOf(song) + 1 + '. ' + song.name + ' - ' + song.length
+                    a(href=`/concert/${concert._id}/details`) = `Details`
+    else
+        section.card
+            h2 No upcomming concerts. Sad!

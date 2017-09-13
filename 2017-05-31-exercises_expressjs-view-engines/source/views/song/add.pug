@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    form.input-form(method='post')
+        h2 Add Song
+        label(for='name') Name
+        input#name.input-field(name='name', type='text' required=true)
+        label(for='genre') Genre
+        input#genre.input-field(name='genre', type='text')
+        label(for='length') Length
+        input#length.input-field(name='length', type='text')
+        input.input-field(name='ballad', type='checkbox', value='Ballad')
+        input.form-btn.btn(type='submit', value='Add')

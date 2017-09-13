@@ -1,0 +1,11 @@
+extends ../../layout
+
+block content
+    h2 Assign admin access
+    form(method='post')
+        .form-group
+            label(for="users")
+            select#users.input-field(name='userId')
+                each user in users
+                    option(value=user._id)= user.username
+            input.btn.btn-warning(type='submit' value='Give permissions')

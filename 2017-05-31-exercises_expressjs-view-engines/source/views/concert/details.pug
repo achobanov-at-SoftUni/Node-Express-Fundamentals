@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    if concert
+        h2= concert.name
+        img.pull-left(src= concert.cover)
+        div.pull-right
+            p#band= 'Band:' + concert.band
+            p= 'Location:' + concert.location
+            p= 'Date:' + concert.date
+            ul#set-list
+                if concert.setList
+                    each song in concert.setList
+                        li= concert.setList.indexOf(song) + 1 + '. ' + song.name + ' - ' + song.minutes + ':' + song.seconds
+        form
+            h2 Add Song
+            label(for='name') Name
+            input#name.input-field(name='name', type='text' required=true)
+            label(for='genre') Genre
+            input#genre.input-field(name='genre', type='text')
+            label(for='minutes') Length
+            input#minutes.input-field(name='minutes', type='number')
+            label(for='seconds') Length
+            input#seconds.input-field(name='seconds', type='number')
+            input#ballad.input-field(name='ballad', type='checkbox', value='Ballad')
+            input#add-song(type='submit', value='Add')
+
+    script(src="../../public/scripts/addSong.js")

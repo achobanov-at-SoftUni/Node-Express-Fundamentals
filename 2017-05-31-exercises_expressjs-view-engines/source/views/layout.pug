@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title MetalWorld
+        link(rel='icon', type='image/x-icon', href='/public/images/favicon.ico')
+        link(rel='stylesheet', type='text/css', href='/public/styles/site.css')
+        script(src='/public/scripts/jquery-3.2.1.min.js')
+    body
+        header
+            nav.nav
+                ul
+                    li
+                        a(href='/') Home Page
+                    li
+                        a(href='/concert/add') Register Concert
+                    li
+                        a(href='/song/list') Songs
+            div#banner
+                img(src='/public/images/banner.png', alt="METAL WORLD")
+        section#message-wrapper
+            if error
+                h2.message#error= error
+            else if success
+                h2.message#success= success
+
+        main.row
+            block content
+        footer.row
+            p &copy;HeavyMetalWorld
+    script(src='/public/scripts/bannerResizer.js')
+    script(src='/public/scripts/printMessage.js')

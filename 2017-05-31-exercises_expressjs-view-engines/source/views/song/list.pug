@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+    ul
+    if songs
+        each song in songs
+            li= song.name + '-' + song.minutes + ':' + song.seconds

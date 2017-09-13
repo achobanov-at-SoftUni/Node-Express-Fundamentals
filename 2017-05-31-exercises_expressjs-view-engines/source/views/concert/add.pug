@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    form.input-form(method='post', enctype='multipart/form-data')
+        h2 Add Product
+        label(for='name') Name
+        input#name.input-field(name='name', type='text' required=true)
+        label(for='band') Band
+        input#band.input-field(name='band', type='text' required=true)
+        label(for='location') Location
+        input#location.input-field(name='location', type='text')
+        label(for='date') Date
+        input#date.input-field(name='date', type='date')
+        label(for='cover') Cover
+        input#cover.input-field(name='cover', type='file', accept='.jpg,.jpeg,.png' required=true)
+        input.form-btn.btn(type='submit', value='Add')

@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h1.head-title Welcome to Forum System!
+    .cards
+        each topic in topics
+            .product-card
+                h2
+                    a(href='/topic/' + topic._id + '/' + topic.title)= topic.title
+                small
+                   a(href='/user/profile/' + topic.author.username)= topic.author.username + ', '
+                small= topic.dateCreated.toString().slice(0, 24)
+                p= topic.description

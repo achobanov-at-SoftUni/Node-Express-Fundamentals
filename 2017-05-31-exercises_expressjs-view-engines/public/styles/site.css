@@ -1,0 +1,102 @@
+@font-face {
+  font-family: IronMaiden;
+  font-style: normal;
+  src: url("../fonts/iron-maiden.ttf");
+}
+@font-face {
+  font-family: MetalLord;
+  font-style: normal;
+  src: url("../fonts/metal-lord.ttf");
+}
+@font-face {
+  font-family: PureEvil2;
+  font-style: normal;
+  src: url("../fonts/pure-evil-2.ttf");
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+}
+.row {
+  overflow: hidden;
+}
+nav {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+nav ul {
+  padding: 0;
+  margin: 0 0 -20px 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 10px;
+  border-top: 3px solid transparent;
+}
+nav ul li a {
+  font-family: MetalLord, sans-serif;
+  font-size: 30px;
+  color: #808080;
+  text-decoration: none;
+  padding: 15px;
+}
+nav lihover {
+  border-top-color: #000;
+}
+#banner {
+  width: 100%;
+}
+#banner img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+#message-wrapper {
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  height: 0;
+}
+#message-wrapper #error {
+  color: #8b0000;
+}
+#message-wrapper #success {
+  color: #006400;
+}
+main {
+  width: 60%;
+  margin: 10px 20% 50px 20%;
+}
+.card h2 {
+  widtH: 100%;
+  text-align: center;
+}
+.card .pull-left {
+  width: 45%;
+}
+.card .pull-right {
+  width: 50%;
+  margin-left: 45%;
+}
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+#greet {
+  position: absolute;
+  width: 60%;
+  font-size: 40px;
+  z-index: 999;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+#greet p {
+  margin: 20px;
+}

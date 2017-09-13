@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h2= name
+    .cards
+        each topic in topics
+            .product-card
+                h2
+                    a(href='/tweet/' + topic._id + '/' + topic.title)= topic.title
+                small
+                   a(href='/user/profile/' + topic.author.username)= topic.author.username + ', '
+                small= topic.dateCreated.toString().slice(0, 24)
+                p= topic.description

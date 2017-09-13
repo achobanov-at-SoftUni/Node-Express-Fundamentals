@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    form(method='post')
+        .form-group
+            label(for='content') Content:
+            input#content.input-field(name='content' type='text', value=content readonly=true)
+        .container
+            each tagName in tags
+                .wrapper.inline
+                    a#tag(href='/tag/' + tagName)= tagName
+        .form-group
+            input.btn.form-btn.btn-danger(type='submit' value='Delete')
